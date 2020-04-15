@@ -62,11 +62,6 @@ class Student():
             return f'{self.firstName} {self.lastName}'
         except AttributeError:
             return 0
-        
 
-kyle = Student()
-kyle.firstName = "Kyle"
-kyle.lastName = "Murphy"
-kyle.cohortNum = 29
-
-print(kyle.fullName)
+    def __str__(self):
+        return f'{self.fullName} is {self.age} years old and is in cohort {self.cohortNum}'
